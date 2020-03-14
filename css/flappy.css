@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box
+}
+
+/* Importando uma fonte */
+@font-face {
+    font-family: 'Pixel';
+    src: url('../fonts/Pixel.ttf');
+}
+
+[wm-flappy] {
+    position: relative;
+    border: 5px solid dodgerblue;
+    /* Tamanho 1200x700 */
+    height: 700px;
+    width: 1200px;
+    margin: 15px;
+    background-color: deepskyblue;
+    /* Qualquer coisa fora da div será escondida */
+    overflow: hidden;
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    /* 50% a esquerda, menos 30px.*/
+    left: calc(50% - 30px);
+    /* transform: rotate(-90deg); */
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid #000;
+}
+
+.barreira .corpo {
+    height: 150px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Pixel';
+    font-size: 70px;
+    /* Ponto ficar na frente dos canos */
+    z-index: 100;
+}
+
+.gameOver {
+    position: absolute;
+    box-sizing: border-box;
+     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: transparent;
+    border: solid 11px #fff;
+    height: 280px;
+    width: 620px; 
+    margin: 180px 340px;
+}
+
+.gameOver h1, .gameOver h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 4.2em;
+    font-family: 'Pixel';
+}
+
+.botao {
+    width: 200px;
+    height: 70px;
+    font-size: 3.2em;
+    font-family: 'Pixel';
+    border-radius: 25px;
+    color: #fff;  
+    border: 0;
+}
+
+.destaque {
+    background-color:rgb(241, 166, 2);
+    box-shadow: 0px 0px 12px 0px #000;
+}
